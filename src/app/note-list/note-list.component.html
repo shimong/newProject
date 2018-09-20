@@ -1,5 +1,7 @@
 <div class="row">
-  <button ng-click="OpenModal()">Add new note</button>
+  <button (click)="OpenModal()">Add new note</button>
 
-
+  <div *ngFor="let note of notesService.Notes">
+    {{note.text}}
+  </div>
 </div>

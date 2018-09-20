@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { NoteListComponent } from './note-list/note-list.component';
 import { NotesService } from "src/app/notes.service";
 import { NoteComponent } from "src/app/note/note.component";
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -20,9 +21,11 @@ import { NoteComponent } from "src/app/note/note.component";
     MatButtonModule, 
     MatCheckboxModule,
     MatDialogModule,
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [NotesService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [NoteComponent]
 })
 export class AppModule { }

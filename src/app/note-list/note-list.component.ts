@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { NoteComponent } from "src/app/note/note.component";
+import { INote, NotesService } from "src/app/notes.service";
 
 @Component({
   selector: 'app-note-list',
@@ -9,7 +10,9 @@ import { NoteComponent } from "src/app/note/note.component";
 })
 export class NoteListComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  private Notes: Array<INote>;
+
+  constructor(public notesService: NotesService, public dialog: MatDialog) {}
 
   ngOnInit() {
   }

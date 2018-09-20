@@ -1,3 +1,8 @@
-<p>
-  note works!
-</p>
+<form (ngSubmit)="onSubmit()" #AddNote="ngForm">
+  Author Name:
+  <input type="text" [(ngModel)]="note.title" name="title">
+  What could you like to say:
+  <input type="text" [(ngModel)]="note.text" name="text">
+  <br/>
+  <button type="submit">Post</button>
+</form>

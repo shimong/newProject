@@ -5,16 +5,22 @@ import { Injectable } from '@angular/core';
 })
 export class NotesService {
 
-  private Notes: Array<Note>;
+  public Notes: Array<INote>;
 
-  constructor() { }
-
-  AddNote(title, text) {
-    this.Notes.push({title: title, text: text} as Note);
+  constructor() { 
+    this.Notes = new Array<INote>();
   }
+
+  AddNote(note: INote) {
+    this.Notes.push(note);
+  }
+
+  // getNotes() {
+  //   return this.Notes;
+  // }
 }
 
-interface Note{
+export interface INote{
     title: string,
     text: string
 }
